@@ -1,9 +1,7 @@
-This basic blockchain network allows nodes to add mine block with unique hash (uses SHA-256 algorithm), mined blocks has necessary details such as hash of the last block index, timestamp, proof, has of the last mined block, and transaction detail.
+This basic blockchain network allows nodes to mine blocks with unique hashes using the SHA-256 algorithm. Mined blocks include necessary details such as the previous block's hash, index, timestamp, proof, and transaction details.  
 
-A cryptocurrency is built on top of this blockchain, a mempool is added along with a method to add new nodes to the network. 
+A cryptocurrency is built on top of this blockchain, with a mempool implemented to store unconfirmed transactions temporarily. The network also supports adding new nodes.  
 
-Also Implemented the concensus of replacing the short chain with the longest chain through the method "replace_chain"
-
-For adding the transactions to the blockchain, I made address node on three ports (port 5001, port 5002, port 5003) that can send cryptocurrency to each other. 
-
-Later I mine these transactions to add them to the blockchain and follow the concensus to maintain consistency. 
+A consensus mechanism ensures that nodes replace a shorter chain with the longest valid chain through the `replace_chain` method.  
+  
+To add transactions to the blockchain, three nodes are set up on ports 5001, 5002, and 5003, allowing them to send cryptocurrency to each other. These transactions are later mined into blocks, and the consensus mechanism ensures consistency across the network.  
